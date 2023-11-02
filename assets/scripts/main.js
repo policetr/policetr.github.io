@@ -34,23 +34,33 @@ function loadAllSections() {
 function setupScrolling() {
     const sections = document.querySelectorAll("main > section");
     const totalSections = sections.length;
+    let lastScrollTime = 0;
+    const scrollDelay = 800; // Délai en millisecondes avant de pouvoir changer à nouveau de section
 
     window.addEventListener("wheel", (event) => {
+        const currentTime = new Date().getTime();
+        if (currentTime - lastScrollTime < scrollDelay) {
+            return; // Ignore les événements de défilement qui se produisent avant la fin du délai
+        }
+
         if (event.deltaY > 0) {
             // Scroll vers le bas
             if (currentSectionIndex < totalSections - 1) {
                 currentSectionIndex++;
                 changeSection(currentSectionIndex, sections);
+                lastScrollTime = currentTime; // Met à jour le temps du dernier défilement
             }
         } else {
             // Scroll vers le haut
             if (currentSectionIndex > 0) {
                 currentSectionIndex--;
                 changeSection(currentSectionIndex, sections);
+                lastScrollTime = currentTime; // Met à jour le temps du dernier défilement
             }
         }
     });
 }
+
 
 function changeSection(index, sections) {
     const currentSection = document.querySelector('.section-visible');
@@ -103,6 +113,9 @@ function loadSection(sectionId, url) {
             }
             if(sectionId === 'adventures') {
                 initAdventures(); // Fonction définie dans timeline.js
+            }
+            if(sectionId === 'skills') {
+                initSkills();
             }
         });
 }

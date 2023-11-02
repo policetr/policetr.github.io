@@ -69,6 +69,7 @@
 .logo-container img:nth-child(1) { /* HTML logo */
     top:-5vw;
     left:8vw;
+    transform: rotate(0deg);
     animation: rotateAroundYou 10s linear infinite;
 
 }
@@ -76,18 +77,21 @@
 .logo-container img:nth-child(2) { /* CSS logo */
     top:-3.5vw;
     left:2vw;
+    transform: rotate(0deg);
     animation: rotateAroundYou 10s linear infinite;
 }
 
 .logo-container img:nth-child(3) { /* JS logo */
     top:1.5vw;
     left:-3vw;
+    transform: rotate(0deg);
     animation: rotateAroundYou 10s linear infinite;
 }
 
 .logo-container img:nth-child(4) { /* React logo */
     top:8vw;
     left:-4.5vw;
+    transform: rotate(0deg);
     animation: rotateAroundYou 10s linear infinite;
 }
 
@@ -100,4 +104,8 @@
 @keyframes rotateAroundYou {
     from { transform: rotate(360deg); }
     to { transform: rotate(0deg); }
+}
+
+.paused-animation {
+    animation-play-state: paused;
 }
