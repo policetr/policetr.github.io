@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rémi Policet - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles/main.css">
+    <link rel="stylesheet" href="assets/styles/about.css">
+    <link rel="stylesheet" href="assets/styles/timeline.css">
+    <link rel="stylesheet" href="assets/styles/skills.css">
+    <link rel="stylesheet" href="assets/styles/adventures.css">
+    <link rel="stylesheet" href="assets/styles/contact.css">
+    <link rel="stylesheet" href="assets/styles/responsive.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <h1>Rémi Policet</h1>
+        <nav>
+            <a href="#about">À propos de moi</a>
+            <a href="#timeline">Mon parcours</a>
+            <a href="#skills">Mes compétences</a>
+            <a href="#adventures">Mes aventures</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div></div>
+    </header>
+
+    <!-- Sections -->
+    <main>
+        <section id="about" class="section-visible">
+            <!-- Le contenu de cette section sera chargé dynamiquement -->
+        </section>
+        <section id="timeline">
+            <!-- Le contenu de cette section sera chargé dynamiquement -->
+        </section>
+        <section id="skills">
+            <!-- Le contenu de cette section sera chargé dynamiquement -->
+        </section>
+        <section id="adventures">
+            <!-- Le contenu de cette section sera chargé dynamiquement -->
+        </section>
+        <section id="contact">
+            <!-- Le contenu de cette section sera chargé dynamiquement -->
+        </section>
+        <!-- Modal pour l'image en grand -->
+        <div id="imageModal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="img01">
+        </div>
+    </main>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>© 2023 par Rémi Policet</p>
+        <a href="./assets/docs/CV_POLICET.pdf" download="CV_POLICET">Télécharger mon CV</a>
+    </footer>
+
+    <div id="popup-ratio" class="popup-ratio-hidden">
+        <div class="popup-content">
+          <p>Ce site n'est pas optimisé pour des écrans de petite taille.<br>Une version responsive est en développement.</p>
+          <button onclick="closePopup()">Fermer</button>
+        </div>
+      </div>
+
+    <script src="assets/scripts/main.js"></script>
+    <script src="assets/scripts/timeline.js"></script>
+    <script src="assets/scripts/adventures.js"></script>
+
+</body>
+
+</html>

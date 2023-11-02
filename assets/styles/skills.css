@@ -1,0 +1,103 @@
+#general-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: center;
+    height:100vh;
+}
+
+#skills-all {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height:84vh;
+    width:80vw;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    flex-wrap: wrap;
+}
+
+.skill-container {
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height:80vh;
+}
+
+.haut {
+    padding-top: 10vh;
+    justify-content: baseline;
+}
+
+.bas {
+    padding-bottom: 10vh;
+    justify-content: end;
+}
+
+.sphere {
+    background-color: white;
+    border-radius: 10vw;
+    width:20vw;
+    height: 20vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.logo-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: rotateAroundSphere 10s linear infinite;
+}
+
+.sphere h1 {
+    color:var(--primary-color);
+    font-size:2vw;
+    text-align: center;
+}
+
+.logo {
+    position: absolute;
+    width: 4vw; /* Ajustez la taille selon vos besoins */
+    height: auto;
+}
+
+.logo-container img:nth-child(1) { /* HTML logo */
+    top:-5vw;
+    left:8vw;
+    animation: rotateAroundYou 10s linear infinite;
+
+}
+
+.logo-container img:nth-child(2) { /* CSS logo */
+    top:-3.5vw;
+    left:2vw;
+    animation: rotateAroundYou 10s linear infinite;
+}
+
+.logo-container img:nth-child(3) { /* JS logo */
+    top:1.5vw;
+    left:-3vw;
+    animation: rotateAroundYou 10s linear infinite;
+}
+
+.logo-container img:nth-child(4) { /* React logo */
+    top:8vw;
+    left:-4.5vw;
+    animation: rotateAroundYou 10s linear infinite;
+}
+
+
+@keyframes rotateAroundSphere {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes rotateAroundYou {
+    from { transform: rotate(360deg); }
+    to { transform: rotate(0deg); }
+}

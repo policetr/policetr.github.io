@@ -1,0 +1,150 @@
+#acontainAllAbout {
+    height : 100%;
+    width : 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#about-container {
+    height : 78vh;
+    width : 100%;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+#rechercheStage {
+    flex:7;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+
+#titleRechercheStage {
+    flex:4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#titleRechercheStage h1 {
+    font-size: 4vw; /* Utilisation de vw (viewport width) pour que la taille s'adapte en fonction de la largeur de la fenêtre de visualisation */
+    font-weight: bold; /* Gras pour plus de visibilité */
+    color: white; /* Une couleur foncée pour le contraste, mais vous pouvez ajuster selon votre préférence */
+    text-transform: uppercase; /* Mettre le texte en majuscules pour une emphase supplémentaire */
+    letter-spacing: 3px; /* Espacement entre les lettres pour une meilleure lisibilité */
+    margin: auto; /* Centrer le bloc dans son conteneur parent */
+    max-width: 80%; /* Limite la largeur pour garder le texte lisible même sur les grands écrans */
+    line-height: 1.4; /* Espacement vertical entre les lignes de texte */
+}
+
+#caracteristics {
+    flex:2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap:5vw;
+}
+
+.caracteristic {
+    font-size: 1.3vw;
+    border: solid;
+    border-color: var(--secondary-color);
+    border-radius: 30px;
+    width:10vw;
+    height: 4vw;
+    line-height: 4vw;
+    text-align: center;
+    color: white;
+}
+
+#colonneMoi {
+    flex:4;
+    flex-direction: column;
+    display: flex;
+    align-items:center;
+    justify-content:baseline;
+}
+
+
+#photo-profile {
+    width:60%;
+    height: auto;
+    border-radius: 50%;
+}
+
+#descriptionMoi-container p {
+    margin-top: 10vh;
+    padding:2vh;
+    width: 80%; /* ou la largeur souhaitée du texte */
+    color: white; /* Couleur du texte */
+    font-size: 1.1vw;
+    text-align: center;
+    background-color: var(--secondary-color);
+    border-radius: 30px;
+}
+
+#CV {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:5vh;
+}
+
+
+#CV a {
+    background-color: transparent; /* Fond transparent */
+    border-radius: 0; /* Coins non arrondis */
+    font-size: 1.5vw;
+    width: auto; /* Largeur automatique selon le contenu */
+    height: auto; /* Hauteur automatique selon le contenu */
+    text-align: center;
+    line-height: normal; /* Hauteur de ligne normale */
+    color: white; /* Texte blanc */
+    text-decoration: none; /* Pas de soulignement par défaut */
+    display: inline; /* Affichage en ligne */
+    transition: text-decoration 0.3s, color 0.3s; /* Transition pour le soulignement et la couleur */
+    cursor: pointer;
+    text-decoration: underline; /* Souligne le texte au survol */
+}
+
+#CV a:hover {
+    color: var(--secondary-color); /* Change la couleur du texte au survol */
+    font-size: 2vw;
+}
+
+#CV a:active {
+    color: #484c64; /* Change la couleur du texte lors du clic */
+}
+
+.fleche {
+    width: 100%;
+    margin-top:2vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.fleche img {
+    width: 3vw;
+    height: auto;
+    animation: bounce 2s infinite; /* Applique l'animation 'bounce' */
+}
+
+/* Keyframes pour l'animation 'bounce' */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}

@@ -1,0 +1,203 @@
+:root {
+    --primary-color: #2f3b69; /* Remplacez par votre couleur principale */
+    --secondary-color: #737EA8; /* Remplacez par votre couleur secondaire */
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Assure que le body prend toute la hauteur de la fenêtre */
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url('../images/background.png'); /* Chemin vers votre image */
+    background-repeat: no-repeat;
+    background-size: cover; /* Ajuste l'image pour couvrir entièrement l'espace */
+    background-attachment: fixed; /* L'image de fond reste fixe lors du défilement */
+}
+
+header {
+    height:5vh;
+    margin-bottom: 3vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Ajustez selon vos besoins */
+}
+
+header h1 {
+    margin: 0;
+    flex: 1; /* Permet au titre de prendre de l'espace à gauche */
+    color: white; /* Couleur du texte du titre */
+}
+
+nav {
+    display: flex;
+    justify-content: center; /* Centre les éléments de navigation */
+    flex: 3; /* Permet à la navigation de prendre plus d'espace */
+}
+
+nav a {
+    color: white; /* Couleur du texte des liens */
+    font-weight: bold;
+    text-decoration: none; /* Enlève le soulignement des liens */
+    margin: 0 10px; /* Espacement entre les liens */
+    font-size: 1em; /* Taille du texte des liens */
+}
+
+nav a:hover {
+    text-decoration: underline; /* Souligne les liens au survol */
+}
+
+nav a.active {
+    color: var(--secondary-color); /* Changez la couleur pour l'onglet actif */
+}
+
+header div {
+    flex:1;
+}
+
+main {
+    overflow: hidden; /* Empêche le défilement interne */
+    height: 100vh; /* Hauteur fixée à la hauteur de la fenêtre */
+}
+
+.main-adjusted-height {
+    height: 80vh;
+}
+
+.section-visible {
+    height: 100vh; /* Assure que la section occupe tout l'écran */
+    display: block; /* Assure que la section est affichée */
+    opacity: 1; /* totalement visible */
+    visibility: visible; /* rend visible */
+    position: relative; /* s'assurer qu'elle est au-dessus des autres */
+
+}
+
+/* Cachez les autres sections */
+main > section {
+    display: none;
+    /* Transition de base pour les sections */
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    opacity: 0; /* commence caché */
+    visibility: hidden; /* non visible */
+}
+
+footer {
+    height:10vh;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap:20vw;
+    padding: 10px 0;
+}
+
+.footer-slide-up {
+    animation: slideUp 0.5s forwards;
+}
+
+.footer-slide-down {
+    animation: slideDown 0.5s forwards;
+}
+
+@keyframes slideUp {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
+}
+
+@keyframes slideDown {
+    from { transform: translateY(0); }
+    to { transform: translateY(100%); }
+}
+
+footer a {
+    color:white;
+}
+
+.fade-in {
+    animation: fadeInAnimation ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.fade-out {
+    animation: fadeOutAnimation ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeOutAnimation {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* Style du modal */
+.modal {
+    display: none; /* Caché par défaut */
+    position: fixed; /* Reste en place lors du défilement */
+    z-index: 1000; /* S'affiche au-dessus des autres éléments */
+    padding-top: 100px; /* Position depuis le haut */
+    left: 0;
+    top: 0;
+    width: 100%; /* Pleine largeur */
+    height: 100%; /* Pleine hauteur */
+    overflow: auto; /* Ajoute une barre de défilement si nécessaire */
+    background-color: rgb(0,0,0); /* Fond noir */
+    background-color: rgba(0,0,0,0.9); /* Noir avec opacité */
+}
+
+/* Style de l'image dans le modal */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 90%; /* Ajustez la largeur */
+    max-width: 1200px; /* Maximum width */
+    max-height: 80vh; /* Hauteur maximale pour éviter de sortir de l'écran */
+    object-fit: contain; /* Assurez-vous que l'image s'adapte tout en conservant ses proportions */
+}
+
+
+/* Style du bouton de fermeture */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.popup-ratio-hidden {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
