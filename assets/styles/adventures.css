@@ -47,7 +47,7 @@
 }
 
 .titre-aventure img{
-    width: 7vw;
+    height: 10vh;
     border-radius: 10px;
 }
 
@@ -65,13 +65,14 @@
 
 .video-container {
     flex:2;
-    padding:2vw;
+    display: flex;
+    justify-content: center;
 }
 
 .centre-aventure .video {
     padding:1vw;
-    height:38vh;
     width:64vh;
+    height:38vh;
     border: solid 2px var(--secondary-color);
     border-radius: 10px;
 }
@@ -89,7 +90,7 @@
     align-items: center;
     gap:5vh;
     flex:2;
-    padding: 2vw;
+    padding: 1vw;
 }
 
 #photos-AT img {
